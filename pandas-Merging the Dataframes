@@ -1,0 +1,16 @@
+#merging the data frames
+import pandas as pd
+data1={'key':['k0','k1','k2','k3'],
+       'Name':['yash','eswari','chaithu','vikram'],
+       'Age':[20,19,22,30]}
+#define a dictionary concatining employee data
+data2={'key':['k0','k1','k2','k3'],
+       'Address':['peta','jarugumalli','muppavaram','kotapadu'],
+       'Qualification':['msc','btech','bca','bsc']}
+#convert the dictionary into dataframe
+df=pd.DataFrame(data1)
+#convert the dictionary into dataframe
+df1=pd.DataFrame(data2)
+print(df,"\n\n",df1)
+res=pd.merge(df,df1,on='key')
+res
